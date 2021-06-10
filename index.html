@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css">
+    <style type="text/css">
+		    	*{
+		    		padding: 0;
+		    		margin: 0px
+		    	}
+		    	.ui-widget {
+		    		font-family: 'Poppins', sans-serif!important;
+				    font-size: 1.1em
+				}
+				  body{
+				  	font-family: 'Poppins', sans-serif!important;
+				  }
+				h1 , h2 , h3{
+					font-size: 16px;
+
+					margin:16px auto;
+				}
+				p{
+					font-size: 14px;
+					margin-bottom: 24px;
+					color: #ccc;
+				}
+				.container {
+		    margin: 0 auto;
+		    position: relative
+		}
+
+		@media only screen and (max-width: 992px) {
+		    .container {
+		        padding:0 12px
+		    }
+		}
+
+		@media(min-width: 992px) {
+		    .container {
+		        width:970px
+		    }
+		}
+
+		@media only screen and (min-width: 1200px) {
+		    .container {
+		        width:1200px
+		    }
+		}
+		td, th{
+			padding: 3px!important;
+		}
+				
+				
+			.ui-widget-content {
+		    border: 1px solid #ccc;
+
+		}
+		.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+			background: #ccc;
+			color: #545454;
+			border: 1px solid #ccc;
+		}
+			.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+				background: #ccc;
+			color: #545454;
+			border: 1px solid #ccc;
+			}
+			
+		.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+			background: #545454;
+			color: #fff;
+			border: 1px solid #ccc;
+		}	
+		header{
+			padding:8px;
+			text-align: center;
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 24px;
+			
+		}
+		#time{
+			position: absolute;
+			right: 28px;
+			display: block;
+			top: 20px;
+			font-size: 18px;
+			color: orange;
+
+		}
+    </style>
+</head>
+<body >
+<header>
+	<div class="header-top">
+		<h1>JqGrid Data Tables</h1>
+		<h6 id="time"></h6>
+
+	</div>
+</header>
+<div class="container">
+	<div class="table-body">
+		<div class="table-1">
+			<h1>Sample Table</h1>
+			<p> Table - sorting , custom Theme</p>
+			<table id="sample-table"></table>
+		</div>
+		<div class="table-1">
+			<h1> Table with pagination</h1>
+			<p> Table - sorting, pagination , custom Theme</p>
+			<table id="table-wiPag"></table>
+			<div id="pagination"></div>
+		</div>
+		<div class="table-1">
+			<h1> Table with NavGrid</h1>
+			<p> Table - sorting, pagination ,Add , Delete , edit, custom Theme</p>
+			<table id="table-navGrid"></table>
+			<div id="navPa"></div>
+		</div>
+		<div class="table-1">
+			<h1> Table with Edit Options</h1>
+			<p> Table - sorting, pagination , edit custom theme</p>
+			<table id="table-edit"></table>
+			<div id="editTable"></div>
+		</div>
+		<div class="table-1">
+			<h1> Table with Grouping</h1>
+			<p> Table - sorting, pagination , edit custom theme , tree view</p>
+			<table id="groupData"></table>
+			<div id="groupPage"></div>
+		</div>
+
+	</div>
+</div>
+
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ -->        <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script>
+ <script src="index.js"></script>
+</body>
+</html>
