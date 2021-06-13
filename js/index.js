@@ -17,7 +17,7 @@ function onSignIn(googleUser) {
 let getTime =() =>{
 	let date = new Date().toLocaleString();
 	$('#time').text(date);
-	console.log(date)	
+	
 	
 }
 setInterval(getTime, 1000);
