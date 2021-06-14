@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	sampleTable();
+o 0n,ghbnb?SF	sampleTable();
 	tablePage();
 	tableNavGrid();
 	editTable();
@@ -43,8 +43,8 @@ let signOut =() =>{
     	localStorage.removeItem("userinfo");
     	  let goForm = document.querySelector('.g-signin2');
 		  let  userInfo = document.querySelector('#userinfo');
-		  goForm.classList.remove('none')
-		  userInfo.classList.remove('block');
+		  // goForm.classList.remove('none')
+		  // userInfo.classList.remove('block');
 
       console.log('User signed out.');
     });
@@ -263,4 +263,3 @@ let groupingData = () => {
 	})
 	$('#groupData').jqGrid('navGrid')
 }
-
