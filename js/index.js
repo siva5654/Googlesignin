@@ -6,7 +6,8 @@ $(document).ready(function(){
 	groupingData();
 	getTime();
 	cookieSsEna();
-	
+	onSignIn();
+	signOut();
 })
 let cookieSsEna = () =>{
  let x = "Cookies enabled: " + navigator.cookieEnabled;
@@ -43,8 +44,8 @@ let signOut =() =>{
     	localStorage.removeItem("userinfo");
     	  let goForm = document.querySelector('.g-signin2');
 		  let  userInfo = document.querySelector('#userinfo');
-		  // goForm.classList.remove('none')
-		  // userInfo.classList.remove('block');
+		  goForm.classList.remove('none')
+		  userInfo.classList.remove('block');
 
       console.log('User signed out.');
     });
