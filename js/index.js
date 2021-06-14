@@ -16,10 +16,7 @@ let cookieSsEna = () =>{
 let onSignIn =(googleUser) => {
 	
   var profile = googleUser.getBasicProfile();
-  let goForm = document.querySelector('.g-signin2');
-  let  userInfo = document.querySelector('#userinfo');
-  goForm.classList.add('none')
-  userInfo.classList.add('block')
+
   let objectName = {
   	"name":profile.getName(),
   	"id":profile.getId(),
@@ -43,6 +40,10 @@ let onSignIn =(googleUser) => {
 let signOut =() =>{
 	var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
+    	  let goForm = document.querySelector('.g-signin2');
+		  let  userInfo = document.querySelector('#userinfo');
+		  goForm.classList.remove('none')
+		  userInfo.classList.remove('block')
       console.log('User signed out.');
     });
 }
