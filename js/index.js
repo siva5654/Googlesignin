@@ -14,10 +14,10 @@ let cookieSsEna = () =>{
 
 }
 function onSignIn(googleUser) {
+	debugger
   var profile = googleUser.getBasicProfile();
-  if(profile !=="null"){
-  	alert('done')
-  }
+  let id = document.querySelector('.g-signin2');
+  id.classList.add('none')
   console.log('ID: ' + profile.getId());
 	console.log(profile);
 }
