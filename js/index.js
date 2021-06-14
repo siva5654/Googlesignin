@@ -16,8 +16,16 @@ let cookieSsEna = () =>{
 function onSignIn(googleUser) {
 	debugger
   var profile = googleUser.getBasicProfile();
-  let id = document.querySelector('.g-signin2');
-  id.classList.add('none')
+  let goForm = document.querySelector('.g-signin2');
+  let  userInfo = document.querySelector('#userinfo');
+  goForm.classList.add('none')
+  userInfo.classList.add('block')
+  let objectName = {
+  	"name":profile.getName(),
+  	"id":profile.getId(),
+  	"image":profile.getImageUrl(),
+  	"email":profile.getEmail(),
+  }
   console.log('ID: ' + profile.getId());
 	console.log(profile);
 }
