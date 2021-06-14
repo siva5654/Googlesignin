@@ -27,7 +27,7 @@ function onSignIn(googleUser) {
   	"email":profile.getEmail(),
   }
   console.log('ID: ' + profile.getId());
-	console.log(profile);
+	console.log(objectName);
 }
 
 let getTime =() =>{
