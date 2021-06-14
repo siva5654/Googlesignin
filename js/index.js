@@ -5,8 +5,14 @@ $(document).ready(function(){
 	editTable();
 	groupingData();
 	getTime();
+	cookieSsEna();
 	
 })
+let cookieSsEna = () =>{
+ let x = "Cookies enabled: " + navigator.cookieEnabled;
+	console.log(x)
+
+}
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId());
