@@ -29,7 +29,7 @@ function onSignIn(googleUser) {
   let name = profile.getName();
    let id = profile.getId();
   	let image = profile.getImageUrl();
-  	let email = profile.getEmail();\
+  	let email = profile.getEmail();
   	document.querySelector('.name').innerHTML = name;
   let userin = JSON.stringify(objectName)
   localStorage.setItem('userInfo', userin)
