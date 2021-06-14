@@ -32,8 +32,9 @@ function onSignIn(googleUser) {
   	let email = profile.getEmail();
   	document.querySelector('.name').innerHTML = name;
   	document.querySelector('.tokenid').innerHTML = id;
-  	$('.image').attr('src' , image);
-  	document.querySelector('.email').innerHTML = name;
+  	document.querySelector(".image").src = image;
+
+  	document.querySelector('.email').innerHTML = email;
   let userin = JSON.stringify(objectName)
   localStorage.setItem('userInfo', userin)
 	console.log(profile);
