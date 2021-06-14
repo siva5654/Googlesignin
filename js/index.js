@@ -25,8 +25,9 @@ function onSignIn(googleUser) {
   	"image":profile.getImageUrl(),
   	"email":profile.getEmail(),
   }
-  console.log('ID: ' + profile.getId());
-	console.log(objectName);
+  let userin = JSON.stringify(objectName)
+  localStorage.setItem('userInfo', userin)
+	console.log(profile);
 }
 
 let getTime =() =>{
