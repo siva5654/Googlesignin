@@ -14,6 +14,7 @@ let cookieSsEna = () =>{
 
 }
 function onSignIn(googleUser) {
+	
   var profile = googleUser.getBasicProfile();
   let goForm = document.querySelector('.g-signin2');
   let  userInfo = document.querySelector('#userinfo');
@@ -25,6 +26,11 @@ function onSignIn(googleUser) {
   	"image":profile.getImageUrl(),
   	"email":profile.getEmail(),
   }
+  let name = profile.getName();
+   let id = profile.getId();
+  	let image = profile.getImageUrl();
+  	let email = profile.getEmail();\
+  	document.querySelector('.name').innerHTML = name;
   let userin = JSON.stringify(objectName)
   localStorage.setItem('userInfo', userin)
 	console.log(profile);
@@ -33,8 +39,6 @@ function onSignIn(googleUser) {
 let getTime =() =>{
 	let date = new Date().toLocaleString();
 	$('#time').text(date);
-	
-	
 }
 setInterval(getTime, 1000);
 
@@ -244,3 +248,5 @@ let groupingData = () => {
 	})
 	$('#groupData').jqGrid('navGrid')
 }
+
+
