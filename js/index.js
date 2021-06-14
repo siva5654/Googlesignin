@@ -15,10 +15,13 @@ let cookieSsEna = () =>{
 }
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
+  if(profile !=="null"){
+  	alert('done')
+  }
   console.log('ID: ' + profile.getId());
-	console.log(profile)// Do not send to your backend! Use an ID token instead.
-  // This is null if the 'email' scope is not present.
+	console.log(profile);
 }
+
 let getTime =() =>{
 	let date = new Date().toLocaleString();
 	$('#time').text(date);
