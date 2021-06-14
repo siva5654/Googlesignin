@@ -6,18 +6,20 @@ $(document).ready(function(){
 	groupingData();
 	getTime();
 	cookieSsEna();
-	onSignIn();
-	signOut();
+	
 })
 let cookieSsEna = () =>{
  let x = "Cookies enabled: " + navigator.cookieEnabled;
 	console.log(x)
 
 }
-let onSignIn =(googleUser) => {
+function onSignIn(googleUser) {
 	
   var profile = googleUser.getBasicProfile();
-
+  let goForm = document.querySelector('.g-signin2');
+  let  userInfo = document.querySelector('#userinfo');
+  goForm.classList.add('none')
+  userInfo.classList.add('block')
   let objectName = {
   	"name":profile.getName(),
   	"id":profile.getId(),
@@ -38,19 +40,18 @@ let onSignIn =(googleUser) => {
 	console.log(profile);
 }
 
-let signOut =() =>{
-	var auth2 = gapi.auth2.getAuthInstance();
-   	 auth2.signOut().then(function () {
-    	localStorage.removeItem("userinfo");
+
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+      localStorage.removeItem("userinfo");
     	  let goForm = document.querySelector('.g-signin2');
 		  let  userInfo = document.querySelector('#userinfo');
 		  goForm.classList.remove('none')
 		  userInfo.classList.remove('block');
-
-      console.log('User signed out.');
     });
-}
-
+  }
 
 let getTime =() =>{
 	let date = new Date().toLocaleString();
