@@ -39,11 +39,13 @@ let onSignIn =(googleUser) => {
 
 let signOut =() =>{
 	var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
+   	 auth2.signOut().then(function () {
+    	localStorage.removeItem("userinfo");
     	  let goForm = document.querySelector('.g-signin2');
 		  let  userInfo = document.querySelector('#userinfo');
 		  goForm.classList.remove('none')
-		  userInfo.classList.remove('block')
+		  userInfo.classList.remove('block');
+
       console.log('User signed out.');
     });
 }
@@ -261,3 +263,4 @@ let groupingData = () => {
 	})
 	$('#groupData').jqGrid('navGrid')
 }
+
