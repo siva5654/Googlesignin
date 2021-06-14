@@ -30,11 +30,11 @@ function onSignIn(googleUser) {
    let id = profile.getId();
   	let image = profile.getImageUrl();
   	let email = profile.getEmail();
-  	document.querySelector('.name').innerHTML = name;
-  	document.querySelector('.tokenid').innerHTML = id;
+  	document.querySelector('.name').innerHTML ="Name :" +''+ name;
+  	document.querySelector('.tokenid').innerHTML = "Token:" +''+ id;
 
   	$('.image').attr('src' , image);
-  	document.querySelector('.email').innerHTML = email;
+  	document.querySelector('.email').innerHTML = "Email :" +''+ email;
   let userin = JSON.stringify(objectName)
   localStorage.setItem('userInfo', userin)
 	console.log(profile);
