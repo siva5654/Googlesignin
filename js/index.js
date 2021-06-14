@@ -31,6 +31,9 @@ function onSignIn(googleUser) {
   	let image = profile.getImageUrl();
   	let email = profile.getEmail();
   	document.querySelector('.name').innerHTML = name;
+  	document.querySelector('.tokenid').innerHTML = id;
+  	$('.image').attr('src' , image);
+  	document.querySelector('.email').innerHTML = name;
   let userin = JSON.stringify(objectName)
   localStorage.setItem('userInfo', userin)
 	console.log(profile);
@@ -248,5 +251,3 @@ let groupingData = () => {
 	})
 	$('#groupData').jqGrid('navGrid')
 }
-
-
