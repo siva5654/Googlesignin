@@ -14,7 +14,6 @@ let cookieSsEna = () =>{
 
 }
 function onSignIn(googleUser) {
-	debugger
   var profile = googleUser.getBasicProfile();
   let goForm = document.querySelector('.g-signin2');
   let  userInfo = document.querySelector('#userinfo');
