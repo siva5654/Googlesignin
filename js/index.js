@@ -25,7 +25,7 @@ function onSignIn(googleUser) {
   	"id":profile.getId(),
   	"image":profile.getImageUrl(),
   	"email":profile.getEmail(),
-	  "time": new Date();
+	  "time": new Date()
   }
   
   $.ajax({
