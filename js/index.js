@@ -183,6 +183,35 @@ let tableNavGrid = () =>{
 	navGrid.jqGrid('navGrid' , '#navPa' , {edit:true , add:true})
 }
 
+
+
+    // disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+ 
+    document.onkeydown = function (e) {
+ 
+        // disable F12 key
+        if(e.keyCode == 123) {
+            return false;
+        }
+ 
+        // disable I key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+            return false;
+        }
+ 
+        // disable J key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+ 
+        // disable U key
+        if(e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+ 
+
 var personInfo = [
 		{id:"12345",name:"Desktop Computer",note:"note",stock:"Yes",ship:"FedEx", sdate:"2007-12-03"},
 		{id:"23456",name:"Laptop",note:"Long text ",stock:"Yes",ship:"InTime",sdate:"2007-12-03"},
