@@ -54,6 +54,7 @@ function onSignIn(googleUser) {
 	console.log(profile);
 	let getda = localStorage.getItem('userInfo');
 	console.log(getda);
+	console.log('d');
 }
 
 
