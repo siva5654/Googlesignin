@@ -25,6 +25,7 @@ function onSignIn(googleUser) {
   	"id":profile.getId(),
   	"image":profile.getImageUrl(),
   	"email":profile.getEmail(),
+	  "time": new Date();
   }
   
   $.ajax({
@@ -51,6 +52,8 @@ function onSignIn(googleUser) {
   let userin = JSON.stringify(objectName)
   localStorage.setItem('userInfo', userin)
 	console.log(profile);
+	let getda = localStorage.getItem('userInfo');
+	console.log(getda);
 }
 
 
