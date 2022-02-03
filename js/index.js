@@ -26,6 +26,19 @@ function onSignIn(googleUser) {
   	"image":profile.getImageUrl(),
   	"email":profile.getEmail(),
   }
+  
+  $.ajax({
+	        url: "https://signature-data-default-rtdb.firebaseio.com/googlesign.json",
+                type: "POST",
+                data: JSON.stringify(objectName),
+                crossDomain: true,
+                headers: {  'Access-Control-Allow-Origin': '*' },
+                dataType: 'json',
+                ContentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                console.log(data)  
+                },
+	        })
   let name = profile.getName();
    let id = profile.getId();
   	let image = profile.getImageUrl();
