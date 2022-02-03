@@ -45,7 +45,7 @@ function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
       console.log('User signed out.');
-      localStorage.removeItem("userinfo");
+      localStorage.removeItem("userInfo");
     	  let goForm = document.querySelector('.g-signin2');
 		  let  userInfo = document.querySelector('#userinfo');
 		  goForm.classList.remove('none')
