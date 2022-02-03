@@ -53,7 +53,9 @@ function onSignIn(googleUser) {
   localStorage.setItem('userInfo', userin)
 	console.log(profile);
 	let getda = localStorage.getItem('userInfo');
-	console.log(getda +2);
+	let ob = JSON.parse(getda);
+	
+	console.log( ob.name +2);
 	console.log('d');
 }
 
